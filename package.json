@@ -1,0 +1,24 @@
+{
+  "name": "exerc-mod26-intercept",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:run": "cypress run",
+    "report:merge": "mochawesome-merge mochawesome-report/*.json > mochawesome-report/merged-report.json",
+    "report:generate": "marge mochawesome-report/merged-report.json -o mochawesome-report/html",
+    "test": "npm run cypress:run && npm run report:merge && npm run report:generate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.13.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1"
+  }
+}
