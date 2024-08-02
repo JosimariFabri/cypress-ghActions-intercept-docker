@@ -7,7 +7,7 @@
     "cypress:run": "cypress run",
     "report:merge": "mochawesome-merge mochawesome-report/*.json > mochawesome-report/merged-report.json",
     "report:generate": "marge mochawesome-report/merged-report.json -o mochawesome-report/html",
-    "test": "npm run cypress:run && npm run report:merge && npm run report:generate"
+    "test": "npm run cypress:run --browser chrome && npm run report:merge && npm run report:generate"
   },
   "keywords": [],
   "author": "",

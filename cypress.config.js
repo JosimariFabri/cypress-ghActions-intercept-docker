@@ -7,6 +7,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
+
   reporter: 'mochawesome',
     reporterOptions: {
         reportDir: 'mochawesome-report',
