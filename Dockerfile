@@ -6,8 +6,10 @@ RUN apt-get update
 
 COPY . /home/cypress/
 
-VOLUME [ "/home/cypress/mochawesome-reportdocker" ]
-
 RUN npm install
+
+RUN npx cypress install --version 13.13.1
+
+VOLUME [ "/home/cypress/mochawesome-reportdocker" ]
 
 CMD ["npm", "run", "test"]
